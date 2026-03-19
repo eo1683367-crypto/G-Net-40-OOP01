@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.Metrics;
+﻿using System.ComponentModel;
+using System.Diagnostics.Metrics;
 using System.Runtime.Intrinsics.X86;
 using System.Security.Claims;
 using System.Xml.Linq;
@@ -105,26 +106,39 @@ namespace G_Net_40_OOP01
             // 2- Click Create New Project
 
             // 3- Choose Class Library(.NET)
-               
+
             // 4- Enter project name and click Create
-               
+
             // 5- Add your classes and methods in the project
-               
+
             // 6- Build the project(Build → Build Solution) to generate the DLL
-               
+
             // 7- Open another project where you want to use the library
-               
+
             // 8- Right - click References / Dependencies → Add Reference
-               
+
             // 9- Select the Class Library project or DLL
-               
+
             // 10- Import the namespace using using
-               
+
             // 11-Create objects and use the library methods if it non static, or call static methods directly
             #endregion
 
 
+            //Answers: Q4:
+            #region Q4 : What is a class library? Why do we use class libraries?
 
+            //What is a class library?
+            // A Class Library is a separate project that contains reusable classes,
+            // but has no Main method and cannot run on its own.
+            // It compiles into a .dll file(Dynamic Link Library).
+
+            //Why do we use class libraries?
+            // 1.Reusability — write once, use in many projects
+            // 2.Organization — Separate concerns into different assemblies
+            // 3.Maintenance — fix a bug once, all projects benefit
+            // 4.Teamwork — different developers work on different libraries
+            #endregion
             #endregion
         }
     }
