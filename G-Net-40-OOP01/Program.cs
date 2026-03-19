@@ -1,16 +1,24 @@
 ﻿using System.ComponentModel;
+using System.Diagnostics;
 using System.Diagnostics.Metrics;
+using System.Net.Sockets;
+using System.Reflection.Metadata;
 using System.Runtime.Intrinsics.X86;
 using System.Security.Claims;
+using System.Threading;
 using System.Xml.Linq;
+using G_Net_40_OOP01.Enums;
 using G_Net_40_OOP01.MyClasses;
 using G_Net_40_OOP01.MyStructs;
 using MathLip;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace G_Net_40_OOP01
 {
     internal class Program
     {
+       
         static void Main(string[] args)
         {
             #region Part01
@@ -58,21 +66,21 @@ namespace G_Net_40_OOP01
             #endregion
             #region Code Example Of Struct 
             #region First Different : (Value type vs Reference Type)
-            Employee emp01 = new Employee("Sara", 30, 5000m);
+            //Employee emp01 = new Employee("Sara", 30, 5000m);
 
-            Employee emp02 = emp01; // This creates a copy of emp01
+            //Employee emp02 = emp01; // This creates a copy of emp01
 
-            Console.WriteLine(emp01);
-            Console.WriteLine(emp02);
-            Console.WriteLine("-------------------------------------------------------");
+            //Console.WriteLine(emp01);
+            //Console.WriteLine(emp02);
+            //Console.WriteLine("-------------------------------------------------------");
 
-            emp02.Salary = 6000m; // Modifying emp02 will NOT affect emp01
-                                  // since they are different instances in memory
-                                  //Because Structs are value types,
-                                  //they are stored on the stack and each variable holds its own copy of the data.
+            //emp02.Salary = 6000m; // Modifying emp02 will NOT affect emp01
+            //                      // since they are different instances in memory
+            //                      //Because Structs are value types,
+            //                      //they are stored on the stack and each variable holds its own copy of the data.
 
-            Console.WriteLine(emp01);
-            Console.WriteLine(emp02);
+            //Console.WriteLine(emp01);
+            //Console.WriteLine(emp02);
             #endregion
             #region Second Different : (Default Constructor)
             //Employee emp03 = new Employee("Omar", 25, 4000m); 
@@ -93,9 +101,9 @@ namespace G_Net_40_OOP01
             //public access modifier allows members to be accessed from anywhere in the code,
             //while private access modifier restricts access to members within the same class or struct.
 
-            MathHelper.Multiply(10, 5); // Valid, because Multiply is public
-            MathHelper.Subtract(10, 5); // Valid, because Subtract is public
-                                        //MathHelper.Add(10, 5); // Invalid, because Add is private
+            // MathHelper.Multiply(10, 5); // Valid, because Multiply is public
+            //  MathHelper.Subtract(10, 5); // Valid, because Subtract is public
+            //MathHelper.Add(10, 5); // Invalid, because Add is private
 
             #endregion
 
@@ -139,6 +147,60 @@ namespace G_Net_40_OOP01
             // 3.Maintenance — fix a bug once, all projects benefit
             // 4.Teamwork — different developers work on different libraries
             #endregion
+            #endregion
+
+            #region Part02
+
+            ////Movie Name 
+            //string MovieName;
+            //Console.Write($"Enter Movie Name : ");
+            //MovieName = Console.ReadLine();
+           
+
+            ////Movie Type
+            //Console.Write("Enter Ticket Type (0 = Standard , 1 = VIP , 2 = IMAX ) : ");
+            //if (!Enum.TryParse(Console.ReadLine(), out TicketType ticketType))
+            //{
+            //    Console.WriteLine("Invalid Ticket Type");
+            //    return;
+            //}
+
+            ////Seat Location
+            //char seatRow;
+            //int seatNumber;
+
+            //Console.Write("Enter Seat Row (A, B, C, ...) : ");
+            //seatRow = char.Parse(Console.ReadLine());
+
+            //Console.Write("Enter Seat Number : ");
+            //seatNumber = int.Parse(Console.ReadLine());
+
+            //SeatLocation seatLocation = new SeatLocation(seatRow,seatNumber);
+
+            ////Price - discount
+            //decimal price;
+            //double discount;
+
+            //Console.Write("Enter Price : ");
+            //price = decimal.Parse(Console.ReadLine());
+
+            //Console.Write("Enter Discount Amount : ");
+            //discount = double.Parse(Console.ReadLine());
+         
+            ////create object
+            //Ticket ticket1 = new Ticket(MovieName, ticketType, seatLocation, price);
+
+            //double discountBefore = discount;
+
+            ////Before Apply Discount
+            //ticket1.PrintTicket();
+
+            //ticket1.ApplyDiscount(ref discount); // discount by ref to sent the all variable not just value
+            //ticket1.CalcTotal();
+
+            ////After Apply Discount
+            //ticket1.PrintAfterDiscount(discountBefore, discount);
+
             #endregion
         }
     }
