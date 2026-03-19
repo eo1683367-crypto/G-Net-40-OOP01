@@ -2,6 +2,7 @@
 using System.Xml.Linq;
 using G_Net_40_OOP01.MyClasses;
 using G_Net_40_OOP01.MyStructs;
+using MathLip;
 
 namespace G_Net_40_OOP01
 {
@@ -83,7 +84,19 @@ namespace G_Net_40_OOP01
 
 
 
+            //Answers: Q2:
+            #region Private vs Public
 
+            //public access modifier allows members to be accessed from anywhere in the code,
+            //while private access modifier restricts access to members within the same class or struct.
+
+            MathHelper.Multiply(10, 5); // Valid, because Multiply is public
+            MathHelper.Subtract(10, 5); // Valid, because Subtract is public
+            //MathHelper.Add(10, 5); // Invalid, because Add is private
+
+            #endregion
+
+            
             #endregion
         }
     }

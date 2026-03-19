@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.37027.9 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G-Net-40-OOP01", "G-Net-40-OOP01\G-Net-40-OOP01.csproj", "{A19B3EFB-E77E-40F7-8D13-AB518AEBC64E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLip", "MathLip\MathLip.csproj", "{86F24FBE-F076-44F1-B48A-EE04B6AB90F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A19B3EFB-E77E-40F7-8D13-AB518AEBC64E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A19B3EFB-E77E-40F7-8D13-AB518AEBC64E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A19B3EFB-E77E-40F7-8D13-AB518AEBC64E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86F24FBE-F076-44F1-B48A-EE04B6AB90F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F24FBE-F076-44F1-B48A-EE04B6AB90F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86F24FBE-F076-44F1-B48A-EE04B6AB90F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86F24FBE-F076-44F1-B48A-EE04B6AB90F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
