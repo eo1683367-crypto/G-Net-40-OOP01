@@ -1,4 +1,6 @@
-﻿using System.Runtime.Intrinsics.X86;
+﻿using System.Diagnostics.Metrics;
+using System.Runtime.Intrinsics.X86;
+using System.Security.Claims;
 using System.Xml.Linq;
 using G_Net_40_OOP01.MyClasses;
 using G_Net_40_OOP01.MyStructs;
@@ -92,11 +94,37 @@ namespace G_Net_40_OOP01
 
             MathHelper.Multiply(10, 5); // Valid, because Multiply is public
             MathHelper.Subtract(10, 5); // Valid, because Subtract is public
-            //MathHelper.Add(10, 5); // Invalid, because Add is private
+                                        //MathHelper.Add(10, 5); // Invalid, because Add is private
 
             #endregion
 
-            
+            //Answers: Q3:
+            #region steps to create and use a class library 
+            // 1- Open Visual Studio
+
+            // 2- Click Create New Project
+
+            // 3- Choose Class Library(.NET)
+               
+            // 4- Enter project name and click Create
+               
+            // 5- Add your classes and methods in the project
+               
+            // 6- Build the project(Build → Build Solution) to generate the DLL
+               
+            // 7- Open another project where you want to use the library
+               
+            // 8- Right - click References / Dependencies → Add Reference
+               
+            // 9- Select the Class Library project or DLL
+               
+            // 10- Import the namespace using using
+               
+            // 11-Create objects and use the library methods if it non static, or call static methods directly
+            #endregion
+
+
+
             #endregion
         }
     }
